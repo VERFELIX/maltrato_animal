@@ -1,0 +1,161 @@
+<%- include("Template/Cabecera", {tituloweb: 'Pagina de Formulario' })%>
+    <CEnter>
+        <H1 class="text-primary">PAGINA WEB DEL FORMULARIO </H1>
+
+    </CEnter>
+    <CEnter>
+        <h2>
+            <%= tituloFormulario %>
+        </h2>
+
+    </CEnter>
+
+    <CEnter>
+
+        <div class="bg-success p-2 text-white">UNETE A LA RED DE ACTIVISTAS</div>
+    </CEnter>
+    <CEnter>
+        <img src="img/red.jpg" alt="logo de nuestra pagina web">
+    </CEnter>
+
+    <p class="fw-bolder">
+        Tomate el tiempo para rellenar este formulario, no será más de un minuto. De esta manera podremos informarte de
+        cualquier evento que se organice cerca de tu localidad, alertas urgentes y noticias relacionadas. Nuestra Red de
+        Activistas es una herramienta poderosa para trabajar unidos por los animales.
+    </p>
+    <p class="fw-bolder">
+        Al llenar el formulario te permitá accesar a un curso en donde se te dará contenidos de :
+    </p>
+    <ul>
+        <li>* Salud </li>
+        <li> * Alimentación</li>
+        <li>* Seguridad, </li>
+        <li> * Ejercicio </li>
+        <li> * Desparasitación </li>
+        <li> * Talleres para consientizar a las personas sobre la responsabilidad que van a adquirir</li>
+        <li>* Consejos generales para tener en cuenta antes de tener una mascota</li>
+
+    </ul>
+
+
+    <form action="http://veronicafelixquiroz@gmail.com" method="post" enctype="text/plain">
+
+        Nombre: <input type="text" name="nombre" size="25" maxlength="50"><br><br>
+
+        Apellidos: <input type="text" name="apellidos" size="35" maxlength="100">
+
+        <br><br>
+
+        Correo electrónico: <input type="text" value="@" name="correo" size="40" maxlength="100">
+
+        <br><br>
+
+        Población: <input type="text" name="poblacion" size="15" maxlength="50">
+
+        <br><br>
+
+       Telefono: <input type="tel" name="telefono" size="15" maxlength="50">
+       <br><br>
+
+            <tr>
+
+                <td>Edad:
+
+                    <br>
+
+                    <input type="radio" name="edad" value="020"> 0-20
+
+                    <br>
+
+                    <input type="radio" name="edad" value="2040" checked> 20-40
+
+                    <br>
+
+                    <input type="radio" name="edad" value="4060"> 40-60
+
+                    <br>
+
+                    <input type="radio" name="edad" value="60100"> 60-100
+                </td>
+
+                <div class="col-md-3">
+                    <label for="validationServer04" class="form-label">SEXO</label>
+                    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback"
+                        required>
+        
+                <option selected disabled value="">Seleccionar</option>
+                <option>FEMENINO</option>
+                <option>MASCULINO</option>
+            </select>
+
+        
+
+                <td>&iquest;C&oacute;mo nos conociste?<br>
+
+                    <input type="checkbox" name="conocer">
+
+                    A trav&eacute;s de un amigo.<br>
+
+                    <input type="checkbox" name="conocer">
+
+                    A trav&eacute;s de un buscador.<br>
+
+                    <input type="checkbox" name="conocer">
+
+                    Navegando por la red.<br>
+
+                    <input type="checkbox" name="conocer">
+
+                    Otros
+                </td>
+
+            </tr>
+
+        </table>
+
+        Opinión sobre nuestra p&aacute;gina web<br>
+
+        <textarea cols="4" rows="5" name="opinion">Escriba aquí su opinión...</textarea>
+
+        <br><br>
+
+        Tiene alguna sugerencia...
+
+        <br>
+
+        <textarea cols="40" rows="5" name="sugerencias">Escriba aquí sus sugerencias...</textarea>
+
+        <br><br>
+
+       
+
+        <table width="50%" border="0" align="center" cellpadding="10" cellspacing="0">
+
+            <tr>
+
+                <td>
+                    <div align="center">
+
+                        <input type="submit" value="Enviar formulario">
+
+                    </div>
+                </td>
+
+                <td>
+                    <div align="center">
+
+                        <input type="Reset" value="Borrar formulario">
+
+                    </div>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </form>
+
+
+
+
+    <%- include("Template/footer")%>
