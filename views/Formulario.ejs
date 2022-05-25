@@ -1,161 +1,207 @@
 <%- include("Template/Cabecera", {tituloweb: 'Pagina de Formulario' })%>
-    <CEnter>
-        <H1 class="text-primary">PAGINA WEB DEL FORMULARIO </H1>
+<CEnter>
+  <H1 class="text-primary">PAGINA WEB DEL FORMULARIO </H1>
+</CEnter>
+<CEnter>
+  <h2><%= tituloFormulario %></h2>
+</CEnter>
 
-    </CEnter>
-    <CEnter>
-        <h2>
-            <%= tituloFormulario %>
-        </h2>
+<CEnter>
+  <div class="bg-success p-2 text-white">UNETE A LA RED DE ACTIVISTAS</div>
+</CEnter>
+<CEnter>
+  <img src="img/red.jpg" alt="logo de nuestra pagina web" />
+</CEnter>
 
-    </CEnter>
+<p class="fw-bolder">
+  Tomate el tiempo para rellenar este formulario, no será más de un minuto. De
+  esta manera podremos informarte de cualquier evento que se organice cerca de
+  tu localidad, alertas urgentes y noticias relacionadas. Nuestra Red de
+  Activistas es una herramienta poderosa para trabajar unidos por los animales.
+</p>
+<p class="fw-bolder">
+  Al llenar el formulario te permitá accesar a un curso en donde se te dará
+  contenidos de :
+</p>
+<ul>
+  <li>* Salud</li>
+  <li>* Alimentación</li>
+  <li>* Seguridad,</li>
+  <li>* Ejercicio</li>
+  <li>* Desparasitación</li>
+  <li>
+    * Talleres para consientizar a las personas sobre la responsabilidad que van
+    a adquirir
+  </li>
+  <li>* Consejos generales para tener en cuenta antes de tener una mascota</li>
+</ul>
 
-    <CEnter>
+<div class="container">
+  <form
+    action="http://veronicafelixquiroz@gmail.com"
+    method="post"
+    enctype="text/plain"
+  >
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        class="form-control"
+        size="25"
+        maxlength="50"
+      />
+    </div>
 
-        <div class="bg-success p-2 text-white">UNETE A LA RED DE ACTIVISTAS</div>
-    </CEnter>
-    <CEnter>
-        <img src="img/red.jpg" alt="logo de nuestra pagina web">
-    </CEnter>
+    <div class="form-group">
+      <label for="apellidos">Apellidos</label>
+      <input
+        type="text"
+        name="apellidos"
+        class="form-control"
+        size="35"
+        maxlength="100"
+      />
+    </div>
 
-    <p class="fw-bolder">
-        Tomate el tiempo para rellenar este formulario, no será más de un minuto. De esta manera podremos informarte de
-        cualquier evento que se organice cerca de tu localidad, alertas urgentes y noticias relacionadas. Nuestra Red de
-        Activistas es una herramienta poderosa para trabajar unidos por los animales.
-    </p>
-    <p class="fw-bolder">
-        Al llenar el formulario te permitá accesar a un curso en donde se te dará contenidos de :
-    </p>
-    <ul>
-        <li>* Salud </li>
-        <li> * Alimentación</li>
-        <li>* Seguridad, </li>
-        <li> * Ejercicio </li>
-        <li> * Desparasitación </li>
-        <li> * Talleres para consientizar a las personas sobre la responsabilidad que van a adquirir</li>
-        <li>* Consejos generales para tener en cuenta antes de tener una mascota</li>
+    <div class="form-group">
+      <label for="correo">Correo electrónico</label>
+      <input
+        type="email"
+        value="@"
+        name="correo"
+        class="form-control"
+        size="40"
+        maxlength="100"
+      />
+    </div>
 
-    </ul>
+    <div class="form-group">
+      <label for="poblacion">Población</label>
+      <input
+        type="text"
+        name="poblacion"
+        class="form-control"
+        size="15"
+        maxlength="50"
+      />
+    </div>
 
+    <div class="form-group">
+      <label for="telefono">Telèfono</label>
+      <input
+        type="tel"
+        name="telefono"
+        class="form-control"
+        size="15"
+        maxlength="50"
+      />
+    </div>
 
-    <form action="http://veronicafelixquiroz@gmail.com" method="post" enctype="text/plain">
+    <h6>Edad:</h6>
 
-        Nombre: <input type="text" name="nombre" size="25" maxlength="50"><br><br>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="020" id="edad020" />
+      <label class="form-check-label" for="edad020">0-20</label>
+    </div>
 
-        Apellidos: <input type="text" name="apellidos" size="35" maxlength="100">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="2040" id="edad2040" />
+      <label class="form-check-label" for="edad2040">20-40</label>
+    </div>
 
-        <br><br>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" value="4060" id="edad4060" />
+      <label class="form-check-label" for="edad4060">40-60</label>
+    </div>
 
-        Correo electrónico: <input type="text" value="@" name="correo" size="40" maxlength="100">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        value="60100"
+        id="edad60100"
+      />
+      <label class="form-check-label" for="edad60100">60-100</label>
+    </div>
 
-        <br><br>
+    <div class="form-group">
+      <label for="validationServer04">SEXO</label>
+      <select class="form-control" id="validationServer04" required>
+        <option selected disabled value="">Seleccionar</option>
+        <option>FEMENINO</option>
+        <option>MASCULINO</option>
+      </select>
+    </div>
 
-        Población: <input type="text" name="poblacion" size="15" maxlength="50">
+    <h6>&iquest;C&oacute;mo nos conociste?</h6>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="aigo" />
+      <label class="form-check-label" for="amigo">
+        A trav&eacute;s de un amigo.
+      </label>
+    </div>
 
-        <br><br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="buscador" />
+      <label class="form-check-label" for="buscador">
+        A trav&eacute;s de un buscador.<br />
+      </label>
+    </div>
 
-       Telefono: <input type="tel" name="telefono" size="15" maxlength="50">
-       <br><br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="red" />
+      <label class="form-check-label" for="red">
+        Navegando por la red.<br />
+      </label>
+    </div>
 
-            <tr>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="aigo" />
+      <label class="form-check-label" for="amigo">
+        A trav&eacute;s de un amigo.
+      </label>
+    </div>
 
-                <td>Edad:
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="otros" />
+      <label class="form-check-label" for="otros"> Otros </label>
+    </div>
 
-                    <br>
+    <div class="form-group">
+      <label for="nombre">Opinión sobre nuestra p&aacute;gina web</label>
+      <textarea class="form-control" rows="3"> </textarea>
+    </div>
 
-                    <input type="radio" name="edad" value="020"> 0-20
+    <div class="form-group">
+      <label for="nombre">Sugerencias</label>
+      <textarea class="form-control" rows="3"> </textarea>
+    </div>
 
-                    <br>
+    <table
+      width="50%"
+      border="0"
+      align="center"
+      cellpadding="10"
+      cellspacing="0"
+    >
+      <tr>
+        <td>
+          <div align="center">
+            <button type="submit" class="btn-primary">Enviar Formulario</button>
+          </div>
+        </td>
 
-                    <input type="radio" name="edad" value="2040" checked> 20-40
+        <td>
+          <div align="center">
+            <button type="Reset" class="btn-secondary">
+              Borrar Formulario
+            </button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
 
-                    <br>
-
-                    <input type="radio" name="edad" value="4060"> 40-60
-
-                    <br>
-
-                    <input type="radio" name="edad" value="60100"> 60-100
-                </td>
-
-                <div class="col-md-3">
-                    <label for="validationServer04" class="form-label">SEXO</label>
-                    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback"
-                        required>
-        
-                <option selected disabled value="">Seleccionar</option>
-                <option>FEMENINO</option>
-                <option>MASCULINO</option>
-            </select>
-
-        
-
-                <td>&iquest;C&oacute;mo nos conociste?<br>
-
-                    <input type="checkbox" name="conocer">
-
-                    A trav&eacute;s de un amigo.<br>
-
-                    <input type="checkbox" name="conocer">
-
-                    A trav&eacute;s de un buscador.<br>
-
-                    <input type="checkbox" name="conocer">
-
-                    Navegando por la red.<br>
-
-                    <input type="checkbox" name="conocer">
-
-                    Otros
-                </td>
-
-            </tr>
-
-        </table>
-
-        Opinión sobre nuestra p&aacute;gina web<br>
-
-        <textarea cols="4" rows="5" name="opinion">Escriba aquí su opinión...</textarea>
-
-        <br><br>
-
-        Tiene alguna sugerencia...
-
-        <br>
-
-        <textarea cols="40" rows="5" name="sugerencias">Escriba aquí sus sugerencias...</textarea>
-
-        <br><br>
-
-       
-
-        <table width="50%" border="0" align="center" cellpadding="10" cellspacing="0">
-
-            <tr>
-
-                <td>
-                    <div align="center">
-
-                        <input type="submit" value="Enviar formulario">
-
-                    </div>
-                </td>
-
-                <td>
-                    <div align="center">
-
-                        <input type="Reset" value="Borrar formulario">
-
-                    </div>
-                </td>
-
-            </tr>
-
-        </table>
-
-    </form>
-
-
-
-
-    <%- include("Template/footer")%>
+<%- include("Template/footer")%>

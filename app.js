@@ -1,96 +1,74 @@
-require  ('dotenv')
-const express = require ('express');
-const app = express();
-const port = process.env.PORT || 3000;
+require('dotenv')
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
 // conexion a base de datos
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const user ='';
-const password='';
-const uri ='';
-const dbname='maltrato-animal';
+const user = ''
+const password = ''
+const uri = ''
+const dbname = 'maltrato-animal'
 
+mongoose
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Base de datos conectada exitosamente'))
+  .catch((e) => console.log(e))
 
-mongoose.connect(uri,
-{useNewUrlParser:true, useUnifiedTopology:true}
-)
-.then (() => console.log('Base de datos conectada exitosamente'))
-.catch(e => console.log(e))
+app.set('view engine', 'ejs')
 
-app.set ('view engine','ejs');
+app.set('views', __dirname + '/views')
 
-app.set('views',__dirname + '/views');
+app.use(express.static(__dirname + '/Public'))
 
-app.use(express.static(__dirname + "/Public"));
-
-app.get('/',(req,res) =>{
- res.render("index",{titulo:" CONOCE MÁS SOBRE EL MALTRATO ANIMAL"})
+app.get('/', (req, res) => {
+  res.render('index', { titulo: ' CONOCE MÁS SOBRE EL MALTRATO ANIMAL' })
 })
 
-
-app.get ('/Quienessomos' ,(req, res) => {
-    res.render("Quienessomos",{tituloQuienessomos:" ¿Quiénes somos?"})
-
+app.get('/Quienessomos', (req, res) => {
+  res.render('Quienessomos', { tituloQuienessomos: ' ¿Quiénes somos?' })
 })
 
-
-app.get ('/Formulario' ,(req, res) => {
-    res.render("Formulario",{tituloFormulario:" FORMULARIO"})
-
+app.get('/Formulario', (req, res) => {
+  res.render('Formulario', { tituloFormulario: ' FORMULARIO' })
 })
 
-app.get ('/AnimaNaturalis' ,(req, res) => {
-    res.render("AnimaNaturalis",{tituloAnimaNaturalis:" ANIMANATURALIS"})
-
+app.get('/AnimaNaturalis', (req, res) => {
+  res.render('AnimaNaturalis', { tituloAnimaNaturalis: ' ANIMANATURALIS' })
 })
 
-app.get ('/violencia' ,(req, res) => {
-    res.render("violencia",{tituloviolencia:" VIOLENCIA"})
-
+app.get('/violencia', (req, res) => {
+  res.render('violencia', { tituloviolencia: ' VIOLENCIA' })
 })
 
-app.get ('/Causas' ,(req, res) => {
-    res.render("Causas",{tituloCausas:" CAUSAS"})
-
+app.get('/Causas', (req, res) => {
+  res.render('Causas', { tituloCausas: ' CAUSAS' })
 })
 
-
-
-app.get ('/Formulario' ,(req, res) => {
-    res.render('PAGINA DEL FORMULARIO')
-
+app.get('/Formulario', (req, res) => {
+  res.render('PAGINA DEL FORMULARIO')
 })
 
-app.get ('/curso' ,(req, res) => {
-    res.render('PAGINA DE CURSO')
-
+app.get('/curso', (req, res) => {
+  res.render('PAGINA DE CURSO')
 })
 
-
-app.get ('/AnimaNaturalis' ,(req, res) => {
-    res.render('PAGINA DEL AnimaNAturalis')
-
+app.get('/AnimaNaturalis', (req, res) => {
+  res.render('PAGINA DEL AnimaNAturalis')
 })
 
-
-app.get ('/Quienessomos' ,(req, res) => {
-    res.render('QUIENES SOMOS')
-  
+app.get('/Quienessomos', (req, res) => {
+  res.render('QUIENES SOMOS')
 })
 
-app.get ('/violencia' ,(req, res) => {
-    res.render('PAGINA VIOLENCIA')
-
+app.get('/violencia', (req, res) => {
+  res.render('PAGINA VIOLENCIA')
 })
 
-app.get ('/Causas' ,(req, res) => {
-    res.render('PAGINA CAUSAS')
-
+app.get('/Causas', (req, res) => {
+  res.render('PAGINA CAUSAS')
 })
 
-
-app.listen (port, () =>{
-
-    console.log ('servidor a su servicio en el puerto',port)
+app.listen(port, () => {
+  console.log('servidor a su servicio en el puerto', port)
 })
-
