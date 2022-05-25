@@ -1,7 +1,21 @@
-require = ('dotenv')
+require  ('dotenv')
 const express = require ('express');
 const app = express();
 const port = process.env.PORT || 3000;
+// conexion a base de datos
+const mongoose = require('mongoose');
+
+const user ='';
+const password='';
+const uri ='';
+const dbname='maltrato-animal';
+
+
+mongoose.connect(uri,
+{useNewUrlParser:true, useUnifiedTopology:true}
+)
+.then (() => console.log('Base de datos conectada exitosamente'))
+.catch(e => console.log(e))
 
 app.set ('view engine','ejs');
 
